@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'sudoku';
+  constructor(private readonly fb: FormBuilder) { }
+
+  public name = new FormControl('asd');
+
+  
 }

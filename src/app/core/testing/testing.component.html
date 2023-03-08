@@ -1,0 +1,8 @@
+<input type="text" [formControl]="userName">
+<!-- <input type="text" [formControl]="userName" (ngModelChange)="valueChange($event)"> -->
+<!-- <input type="text" (keyup)="onKeySearch($event)"> -->
+<div>
+    <div *ngFor="let user of users | filter : forFilter : userName.value">
+        {{user.name}}
+    </div>
+</div>
