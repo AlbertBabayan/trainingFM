@@ -1,21 +1,20 @@
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import {InputNumberModule} from 'primeng-lts/inputnumber';
 
 import { AppComponent } from './app.component';
-import { CoreModule } from './core/core.module';
-import { HighlightDirective } from './infrastructure/directives/highlight.directive';
+import { UserModule } from "./features/user/user.module";
+import { RouterModule } from "@angular/router";
 
 @NgModule({
   declarations: [
     AppComponent,
-    HighlightDirective,
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule,
-    CoreModule
+    UserModule,
+    RouterModule.forRoot([
+      {path: '', redirectTo: 'user-list', pathMatch: 'full'},
+    ]),
   ],
   providers: [],
   bootstrap: [AppComponent]

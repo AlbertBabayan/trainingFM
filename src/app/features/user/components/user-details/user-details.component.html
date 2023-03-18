@@ -1,0 +1,10 @@
+<div *ngIf="user; else noUserFoundTmp">
+  <div>{{user.id}}</div>
+  <div>{{user.name}}</div>
+  <div>{{user.age}}</div>
+  <div>{{user.job.title}}</div>
+</div>
+
+<ng-template #noUserFoundTmp>
+  No User Found
+</ng-template>
