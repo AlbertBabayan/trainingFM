@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { debounceTime, Subject } from 'rxjs';
 import { IFilterUser } from 'src/app/infrastructure/interfaces';
 
 @Component({

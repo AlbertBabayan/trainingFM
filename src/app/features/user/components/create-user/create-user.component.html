@@ -1,0 +1,31 @@
+<div class="container">
+    <form [formGroup]="userForm">
+        <div>
+            <div>
+                <label>Name</label>
+                <input formControlName="name" type="text">
+            </div>
+            <!-- <div *ngif="userForm.get('name').errors as errors">
+                <p *ngIf="errors.maxLength">Must not be more than 10 characters</p>
+            </div> -->
+        </div>
+        <div>
+            <label>Age</label>
+            <input formControlName="age" type="text">
+        </div>
+        <div>
+            <label>Job</label>
+            <div formGroupName="job">
+                <label>Title</label>
+                <input formControlName="title" type="text">
+            </div>
+        </div>
+        <div>
+            <label>Avatar</label>
+            <input #uploadFile type="file" (change)="onFileSelect($event)" />
+            <button (click)="uploadFile.click()">File Upload</button>
+            <img *ngIf="previewImage" [src]="previewImage"/>
+        </div>
+        <button (click)="addUser()"><i class="fa fa-spinner fa-spin"></i>Create</button>
+    </form>
+</div>

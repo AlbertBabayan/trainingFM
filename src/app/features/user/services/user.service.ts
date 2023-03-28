@@ -4,7 +4,7 @@ import { IUser } from "../../../infrastructure/interfaces";
 
 @Injectable()
 export class UserService {
-  public users = [
+  public users: IUser[] = [
     {id: 1, name: 'John', age: 20, job: {title: 'Developer', language: 'JavaScript'}},
     {id: 2, name: 'Jane', age: 24, job: {title: 'Developer', language: 'JavaScript'}},
     {id: 3, name: 'Bob', age: 30, job: {title: 'Developer', language: 'JavaScript'}},
@@ -19,5 +19,10 @@ export class UserService {
 
   public getUser(id: number): Observable<IUser | undefined> {
     return of(this.users.find(user => user.id === id));
+  }
+
+  public addUser(user: IUser): Observable<IUser> {
+    this.users.push(user);
+    return of(user);
   }
 }

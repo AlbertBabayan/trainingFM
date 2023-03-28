@@ -3,8 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TestingComponent } from './testing/testing.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FilterPipe } from '../infrastructure/pipes';
-import { TestComponent } from './test/test.component';
-import {TableModule} from 'primeng-lts/table';
+
 
 
 
@@ -12,12 +11,10 @@ import {TableModule} from 'primeng-lts/table';
   declarations: [
     TestingComponent,
     FilterPipe,
-    TestComponent
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    TableModule
   ],
   exports: [
     TestingComponent

@@ -22,4 +22,7 @@ export class UserListComponent implements OnInit {
   public navigateToUser(id: number): void {
     this.router.navigate(['user-details', id]);
   }
+  public navigateToCreate(): void {
+    this.router.navigate(['create']);
+  }
 }

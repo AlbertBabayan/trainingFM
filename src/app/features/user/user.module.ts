@@ -4,16 +4,20 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
 import { UserListComponent } from './components/user-list/user-list.component';
 import { UserRoutingModule } from "./user-routing.module";
 import { UserService } from "./services/user.service";
+import { CreateUserComponent } from './components/create-user/create-user.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   imports: [
     CommonModule,
     UserRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [
     UserDetailsComponent,
-    UserListComponent
+    UserListComponent,
+    CreateUserComponent
   ],
   providers: [
     UserService,

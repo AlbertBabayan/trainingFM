@@ -8,14 +8,13 @@
     </tr>
   </thead>
   <tbody>
-    <tr
-      *ngFor="let user of users"
-      (click)="navigateToUser(user.id)"
-    >
+    <tr *ngFor="let user of users" (click)="navigateToUser(user.id)">
       <td>{{user.id}}</td>
       <td>{{user.name}}</td>
       <td>{{user.age}}</td>
       <td>{{user.job.title}}</td>
+      <td>{{user.job.language}}</td>
     </tr>
   </tbody>
 </table>
+<button (click)="navigateToCreate()" type="button">Create User</button>
