@@ -1,8 +1,14 @@
 <input type="text" [formControl]="userName">
 <!-- <input type="text" [formControl]="userName" (ngModelChange)="valueChange($event)"> -->
 <!-- <input type="text" (keyup)="onKeySearch($event)"> -->
-<div>
+<!-- <div>
     <div *ngFor="let user of users | filter : forFilter : userName.value">
         {{user.name}}
     </div>
-</div>
+</div> -->
+<div>.........</div>
+<ng-container 
+    [ngTemplateOutlet]="temp2"
+    [ngTemplateOutletContext]="{ data: 'Its a pretty template' }">
+</ng-container>
+<div>.........</div>

@@ -6,6 +6,7 @@ import { UserRoutingModule } from "./user-routing.module";
 import { UserService } from "./services/user.service";
 import { CreateUserComponent } from './components/create-user/create-user.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TestingComponent } from 'src/app/core/testing/testing.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     UserDetailsComponent,
     UserListComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    TestingComponent
   ],
   providers: [
     UserService,

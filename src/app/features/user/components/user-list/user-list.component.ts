@@ -1,7 +1,8 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, ViewChild } from '@angular/core';
 import { UserService } from "../../services/user.service";
 import { IUser } from "../../../../infrastructure/interfaces";
 import { Router } from "@angular/router";
+import { TestingComponent } from 'src/app/core/testing/testing.component';
 
 @Component({
   selector: 'app-user-list',
@@ -13,10 +14,15 @@ export class UserListComponent implements OnInit {
 
   private userService = inject(UserService);
   private router = inject(Router);
+  @ViewChild(TestingComponent) child: TestingComponent;
 
   ngOnInit() {
     this.userService.getUsers()
       .subscribe(users => this.users = users)
+  }
+
+  public forChild() {
+    this.child.foo_1();
   }
 
   public navigateToUser(id: number): void {

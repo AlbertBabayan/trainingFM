@@ -18,3 +18,13 @@
   </tbody>
 </table>
 <button (click)="navigateToCreate()" type="button">Create User</button>
+
+<button (click)="forChild()" type="button">X</button>
+<app-testing>
+  <ng-template #temp2 let-data="data">
+    <p>
+      Accessing template containing data in <b>bold</b> using ngTemplateOutlet.
+      <b>{{ data }}</b>
+    </p>
+  </ng-template>
+</app-testing>

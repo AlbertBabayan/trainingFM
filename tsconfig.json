@@ -19,13 +19,13 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
+    "strictPropertyInitialization": false,
     "lib": [
       "ES2022",
       "dom"
     ]
   },
   "angularCompilerOptions": {
-    "strictPropertyInitialization": false,
     "noImplicitReturns": false,
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

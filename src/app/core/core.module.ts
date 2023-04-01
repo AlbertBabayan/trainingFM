@@ -16,8 +16,5 @@ import { FilterPipe } from '../infrastructure/pipes';
     CommonModule,
     ReactiveFormsModule,
   ],
-  exports: [
-    TestingComponent
-  ]
 })
 export class CoreModule { }

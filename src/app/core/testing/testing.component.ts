@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ContentChild, Input, OnInit, TemplateRef } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { IFilterUser } from 'src/app/infrastructure/interfaces';
+import { UserModule } from 'src/app/features/user/user.module';
+import { IFilterUser } from 'src/app/infrastructure/interfaces/filterUser.interface';
+
 
 @Component({
   selector: 'app-testing',
@@ -8,6 +10,10 @@ import { IFilterUser } from 'src/app/infrastructure/interfaces';
   styleUrls: ['./testing.component.scss']
 })
 export class TestingComponent implements OnInit {
+
+  public mouse = 'mouse';
+  private cat = 'cat';
+  @ContentChild('temp2') temp2: TemplateRef<any>;
 
   constructor() { }
 
@@ -31,6 +37,14 @@ export class TestingComponent implements OnInit {
   forFilter = (item: IFilterUser, search: string) => item.name.includes(search);
 
   ngOnInit(): void {
+  }
+
+  private foo() {
+    console.log(this.mouse, this.cat);
+  }
+
+  public foo_1() {
+    console.log(this.mouse, this.cat);
   }
 
 }
